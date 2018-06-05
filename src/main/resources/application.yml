@@ -47,11 +47,11 @@ zuul:
   ignoredServices: "*"
   prefix: /api
   routes:
-    USER-SERVICE: /user/**
+    USER: /user/**
     AUTH-SERVER: /auth/**
     TEST:  #TEST
        path: /test/**
-       serviceId: http://127.0.0.1:8000/api/test
+       serviceId: http://127.0.0.1:6677/
 
 spring:
   redis:
@@ -71,3 +71,13 @@ spring:
     enabled: false
     sampler:
       percentage: 1  #采样率
+#配置日志
+logging:
+  #配置日志文件路径
+ # path: G:\work_space\study_spring2\study_boot_demo\log
+  level:
+    root: debug
+  # xatu.zsl: debug #不同目录下的日志可配置不同级别
+  # org.springfromework.web: info
+  # org.hibernate: error
+  #test
